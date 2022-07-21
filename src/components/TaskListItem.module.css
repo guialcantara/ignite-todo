@@ -1,0 +1,90 @@
+.taskListItem{
+    display: flex;
+    align-items:flex-start;
+    gap: 0.5rem;
+    width: 100%;
+    
+    background: var(--gray-500);
+    border-radius: 8px;
+    height:4rem;
+    padding: 1rem
+}
+
+.taskListItem label{
+flex: 1;
+}
+
+.trash:hover{
+color: var(--danger);
+cursor: pointer;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--gray-200)
+  }
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 9999px;
+    border: 2px solid var(--blue)
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: var(--gray-600);
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: var(--purple-dark);
+    border: none;
+    
+  }
+
+  .container input:checked ~ p {
+    text-decoration: line-through;
+    color: var(--gray-300)
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    left:0.562rem;
+    top: 0.325rem;
+    width: 0.25rem;
+    height: 0.5rem;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
