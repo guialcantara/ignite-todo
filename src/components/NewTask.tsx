@@ -2,8 +2,11 @@ import { PlusCircle } from "phosphor-react";
 import { useState } from "react";
 import styles from './NewTask.module.css';
 
+interface newTaskProps{
+    createNewTask: (newTask:string) => void;
+}
 
-export function NewTask(props: any) {
+export function NewTask(props: newTaskProps) {
     const [newTask, setNewTask] = useState("");
 
     function createNewTask() {
